@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Degital portfolio of "Selvam"</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="skills.css">
+</head>
+
+<body>
+    <div class="device-notification">
+        <a class="device-notification--logo" href="index.html">
+          <img src="assets/img/logo.png" alt="Global">
+          <p>SELVAM</p>
+        </a>
+        <p class="device-notification--message">Selvam has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+      </div>
+      
+      <div class="perspective effect-rotate-left">
+        <div class="container"><div class="outer-nav--return"></div>
+          <div id="viewport" class="l-viewport">
+            <div class="l-wrapper">
+              <header class="header">
+                <a class="header--logo" href="index.html">
+                  <img src="assets/img/logo.png" alt="Global">
+                  <p>SELVAM</p>
+                </a>
+                <div class="header--nav-toggle">
+                  <span></span>
+                </div>
+              </header>
+              <!-- section -->
+              <div class="center">
+              <div class="main">
+                <div class="progress">
+                  <div class="title">
+                    <img src="img/html.png" alt="">
+                    <h3>HTML</h3>
+                  </div>
+                  <div class="barline">
+                    <div class="countbar" data-percentNumber="89"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="title">
+                    <img src="img/css.png" alt="">
+                    <h3>CSS</h3>
+                  </div>
+                  <div class="barline">
+                    <div class="countbar" data-percentNumber="90"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="title">
+                    <img src="img/react.png" alt="">
+                    <h3>React.js</h3>
+                  </div>
+                  <div class="barline">
+                    <div class="
+                    countbar" data-percentNumber="50"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="title">
+                    <img src="img/xd.png.png" alt="">
+                    <h3>Figma</h3>
+                  </div>
+                  <div class="barline">
+                    <div class="countbar" data-percentNumber="70"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="title">
+                    <img src="img/js.png" alt="">
+                    <h3>javascript</h3>
+                  </div>
+                  <div class="barline">
+                    <div class="countbar" data-percentNumber="60"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="title">
+                    <img src="img/ps.png" alt="">
+                    <h3>Photoshop</h3>
+                  </div>
+                  <div class="barline">
+                    <div class="countbar" data-percentNumber="85"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="title">
+                    <img src="img/Github.png" alt="">
+                    <h3>Github</h3>
+                  </div>
+                  <div class="barline">
+                    <div class="countbar" data-percentNumber="50"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="title">
+                    <img src="img/bootstrap.png" alt="">
+                    <h3>Bootstrap 5</h3>
+                  </div>
+                  <div class="barline">
+                    <div class="countbar" data-percentNumber="55"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+            
+              <!-- out navbar  -->
+              
+              <ul class="outer-nav">
+                <li class="is-active"><a href="skills.html">Skills</a></li>
+                <li><a href="edu.html">Education</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html">Hire Me</a></li>
+              </ul>
+            
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+            <script src="assets/js/functions-min.js"></script>
+            <script>
+              let  numberPercent = document.querySelectorAll('.countbar')
+              let getPercent = Array.from(numberPercent)
+
+              getPercent.map((items) => {
+                  let startCount = 0
+                  let progressBar = () => {
+                      startCount ++
+                      items.innerHTML = `<h3>${startCount}%</h3>`
+                      items.style.width = `${startCount}%`
+                      if(startCount == items.dataset.percentnumber) {
+                          clearInterval(stop)
+                      }
+                  }
+                  let stop = setInterval(() => {
+                      progressBar()
+                  },30)
+              })
+            </script>
+</body>
+</html>

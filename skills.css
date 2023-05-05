@@ -1,0 +1,121 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+
+  }
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .center{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .progress {
+    margin: 25px 0;
+  }
+  .title {
+    display: flex;
+    margin-bottom: 13px;
+  }
+  .title h3 {
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .barline {
+    height: 12px;
+    background: #fff;
+    border-radius: 20px;
+  }
+  img{
+    width: 100%;
+    max-width: 30px;
+  }
+  .countbar {
+    height: 12px;
+    box-shadow: 0 0 14px #0f33ff;
+    background: #0f33ff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+  }
+  .countbar h3 {
+    position: absolute;
+    right: -24px;
+    top: -47px;
+    background: #24292e;
+    padding: 4px 6px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+  }
+  .countbar h3::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 11px;
+    height: 11px;
+    background: #24292e;
+    transform: rotate(45deg) translateX(-60%);
+  }
+  
+  @media (max-width: 700px){
+    .header{
+      background-color: #0c0c0c;
+    }
+    .main{
+        width: 80%;
+    }
+    .countbar h3{
+        font-size: 20px;
+    }
+    .progress{
+      margin: 25px 0;
+    }
+    .barline {
+      height: 6px;
+      background: #fff;
+      border-radius: 20px;
+    }
+    .countbar {
+      height: 6px;
+      background: #0f33ff;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      position: relative;
+    }
+    .countbar h3{
+      font-size: 10px;
+      right: -17px;
+      top: -33px;
+    }
+  }
+
+  @media (max-height: 700px){
+    .header{
+      background-color: #0c0c0c;
+    }
+    .main{
+      margin-top: 400px;
+      margin-bottom: 100px;
+    }
+    .center{
+      overflow: scroll;
+    }
+  }
